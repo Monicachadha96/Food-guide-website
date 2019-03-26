@@ -11,6 +11,12 @@
   padding-top: 60px;
 }
 
+img:hover{
+  -moz-box-shadow: 0 0 15px  #ccc;
+		-webkit-box-shadow: 0 0 15px #ccc;
+		box-shadow: 0 0 15px #ccc;
+}
+
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -101,6 +107,7 @@ text-align: center;}
     justify-content: center; /* horizontal centering */
     background-color: rgb(66, 150, 181);
     width: 101%;
+    height:300px;
 }
 @media screen and (max-width: 500px) {
   .column {
