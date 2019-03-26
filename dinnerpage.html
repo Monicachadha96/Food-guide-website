@@ -15,3 +15,111 @@
     <link href="mainpage.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="brunchpage.html">Brunch</a>
+    <a href="dinnerpage.html">Dinner</a>
+    <a href="drinkspage.html">Drinks</a>
+    <a href="contact.html">Contact us</a>
+  </div>
+
+  <span style="font-size:30px;cursor:pointer;color:black" onclick="openNav()">&#9776; Menu</span>
+
+  <div class="topnav-right">
+     <a class="active" href="index.html">Nottingham</a>
+     <a href="">London (coming soon)</a>
+   </div>
+
+
+  <div class="heading">
+    <img src="pictures/icon.jpg" class="icon" alt="...">
+      <h1> NOTTINGHAM FOOD GUIDE </h1>
+      </div>
+
+  <h3> DINNER </h3>
+
+  <div class="tab" >
+      <button class="tablink" onclick="openCity('Place1', this, 'rgb(66, 150, 181)')" id="defaultOpen">Annie's Burger Shack</button>
+      <button class="tablink" onclick="openCity('Place2', this, 'rgb(55, 130, 157)')">Sexy Mama loves Spaghetti</button>
+      <button class="tablink" onclick="openCity('Place3', this, 'rgb(45, 105, 127)')">Coco Tang Cafe</button>
+      <button class="tablink" onclick="openCity('Place4', this, 'rgb(22, 65, 80)')">Oscar and Rosie's</button>
+  </div>
+  <div class="tab1">
+  <div id="Place1" class="tabcontent">
+    <p>An American feel resturant serving a wide variety of burgers including classic and unusual combos<br>
+      All burgers are avaliable in veggie and vegan options.</p>
+    <img src="pictures/annies.jpg" class="card-img-top" alt="...">
+  </div>
+
+
+
+  <div id="Place2" class="tabcontent">
+
+    <p>An authemtic small Italian in the heart of Nottingham serving fresh pasta <br> Normally requires booking but worth it for the food with a menu that changes often </p>
+    <img src="pictures/sexym.jpg" class="card-img-top" alt="...">
+    </div>
+
+
+  <div id="Place3" class="tabcontent">
+
+    <p>Insert info about place 3.</p>
+      <img src="pictures/cocotang.jpg" class="card-img-top" alt="...">
+  </div>
+
+  <div id="Place4" class="tabcontent">
+
+    <p>Serving debatably the best pizza and mac n cheese in Nottingham! <br>
+      They also do their famous 1m pizzas, and a wide range of vegan options too.</p>
+      <img src="pictures/oscar.jpg" class="card-img-top" alt="...">
+  </div>
+
+  </div>
+  <form>
+  <div class="form-group">
+  <label for="exampleInputEmail1">Subscribe to our weekly newsletter</label>
+  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <button type="submit" class="btn btn-dark">Submit</button>
+  </form>
+</body>
+
+
+<script>
+$(function () {
+$('[data-toggle="popover"]').popover()
+})
+
+function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+
+function openCity(cityName,elmnt,color) {
+var i, tabcontent, tablinks;
+tabcontent = document.getElementsByClassName("tabcontent");
+for (i = 0; i < tabcontent.length; i++) {
+tabcontent[i].style.display = "none";
+}
+tablinks = document.getElementsByClassName("tablink");
+for (i = 0; i < tablinks.length; i++) {
+tablinks[i].style.backgroundColor = "";
+}
+document.getElementById(cityName).style.display = "block";
+elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+
+
+</script>
+
+</html>

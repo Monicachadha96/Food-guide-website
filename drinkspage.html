@@ -15,3 +15,103 @@
     <link href="mainpage.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   </head>
+
+  <body>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="brunchpage.html">Brunch</a>
+  <a href="dinnerpage.html">Dinner</a>
+  <a href="drinkspage.html">Drinks</a>
+    <a href="deals.html">Student Deals</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer;color:black" onclick="openNav()">&#9776; Menu</span>
+<div class="topnav-right">
+   <a class="active" href="index.html">Nottingham</a>
+   <a href="">London (coming soon)</a>
+ </div>
+
+
+<div class="heading">
+  <img src="icon.jpg" class="icon" alt="...">
+    <h1> NOTTINGHAM FOOD GUIDE </h1>
+    </div>
+  </div>
+
+<h3> DRINKS </h3>
+<div class="tab" >
+    <button class="tablink" onclick="openCity('Place1', this, 'rgb(66, 150, 181)')" id="defaultOpen">Pepper Rocks</button>
+    <button class="tablink" onclick="openCity('Place2', this, 'rgb(55, 130, 157)')">Hockley Arts Club</button>
+    <button class="tablink" onclick="openCity('Place3', this, 'rgb(45, 105, 127)')">Coco Tang</button>
+    <button class="tablink" onclick="openCity('Place4', this, 'rgb(22, 65, 80)')">Boilermaker</button>
+</div>
+<div class="tab1">
+<div id="Place1" class="tabcontent">
+  <p>A happy hour up until 10pm with a wide range of options <br> Inside there is a very cosy feel with live music weekly!</p>
+  <img src="pictures/pepper.jpg" class="card-img-top" alt="...">
+</div>
+
+
+
+<div id="Place2" class="tabcontent">
+  <p>One of the most highly regarded places for drinks in Nottingham with a decor which includes different rooms such as the Japanese garden <br> A wide variety of cocktails on the menu too!</p>
+  <img src="pictures/hockley.jpg" class="card-img-top" alt="...">
+  </div>
+
+
+<div id="Place3" class="tabcontent">
+
+  <p>Insert info about place 3.</p>
+    <img src="pictures/cocotang1.jpg" class="card-img-top" alt="...">
+</div>
+
+<div id="Place4" class="tabcontent">
+
+  <p>Enter what looks like the outside of a laudrette to the bar. <br>  ????? </p>
+    <img src="pictures/boiler.jpg" class="card-img-top" alt="...">
+</div>
+
+</div>
+<form>
+<div class="form-group">
+<label for="exampleInputEmail1">Subscribe to our weekly newsletter</label>
+<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+</div>
+<button type="submit" class="btn btn-dark">Submit</button>
+</form>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+
+</script>
+
+</body>
+</html>
