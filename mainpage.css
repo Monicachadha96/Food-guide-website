@@ -105,7 +105,9 @@ width: 25%;}
   .tablink:hover {
     background-color: #777;
   }
-
+a{
+  color: white;
+}
   /* Style the tab content */
   .tabcontent {
     color: white;
@@ -117,7 +119,7 @@ width: 25%;}
   align-items: center;
     }
 
-  
+
 
   #Place1 {background-color:rgb(66, 150, 181);
   }
